@@ -1,0 +1,54 @@
+{
+    "config_source": [
+        {
+            "config_type": "PICCOLO_HEAD",
+            "name": "srcfs_head",
+            "path": "//experimental/users/shevtsov/borgspec-codelab/piccolo.pi"
+        }
+    ],
+    "jobs": [
+        {
+            "borgtype": "job",
+            "cell": "oi",
+            "name": "example_job",
+            "size": 1,
+            "tags": [
+                "example_cluster",
+                "example_global",
+                "example_job_cluster",
+                "example_job_global"
+            ],
+            "user": "codelab"
+        }
+    ],
+    "sources": [
+        "/google/src/cloud/shevtsov/borgspec_codelab/google3/codelab/sandbox/borgspec/shevtsov/borgspec.codelab",
+        "/google/src/cloud/shevtsov/borgspec_codelab/google3/production/borg/templates/borgspec/prodplan_borgspec.py"
+    ],
+    "tag_definitions": [
+        {
+            "description": "Example for a negative tag. This tag will be present for all jobs except for example_job.",
+            "name": "negative_example1"
+        },
+        {
+            "description": "Example for a negative tag. This tag will be present for all example_job instances except in ie.",
+            "name": "negative_example2"
+        },
+        {
+            "description": "Example for a per job per cluster tag. This tag will be present for example_job in ie only.",
+            "name": "example_job_cluster"
+        },
+        {
+            "description": "Example for a global tag. This tag will be present in all jobs.",
+            "name": "example_global"
+        },
+        {
+            "description": "Example for a cluster-wide tag. This tag will be present for all jobs in ie.",
+            "name": "example_cluster"
+        },
+        {
+            "description": "Example for a global per job tag. This tag will be present for all instances of example_job.",
+            "name": "example_job_global"
+        }
+    ]
+}
